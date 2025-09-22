@@ -1,0 +1,39 @@
+def calcular_descuento(monto_total, porcentaje_descuento=10):
+    """
+    Calcula el descuento basado en el monto total y un porcentaje de descuento.
+    
+    Args:
+        monto_total (float): El monto total de la compra
+        porcentaje_descuento (float, optional): Porcentaje de descuento. Por defecto 10.
+    
+    Returns:
+        float: El monto del descuento calculado
+    """
+    descuento = monto_total * (porcentaje_descuento / 100)
+    return descuento
+
+# Programa principal
+def main():
+    # Primera llamada: solo monto total (usa descuento por defecto 10%)
+    monto1 = 1000.00
+    descuento1 = calcular_descuento(monto1)
+    monto_final1 = monto1 - descuento1
+    print(f"Compra 1:")
+    print(f"Monto original: ${monto1:.2f}")
+    print(f"Descuento (10%): ${descuento1:.2f}")
+    print(f"Monto final: ${monto_final1:.2f}")
+    print()
+
+    # Segunda llamada: monto total y porcentaje de descuento personalizado
+    monto2 = 2000.00
+    porcentaje2 = 15
+    descuento2 = calcular_descuento(monto2, porcentaje2)
+    monto_final2 = monto2 - descuento2
+    print(f"Compra 2:")
+    print(f"Monto original: ${monto2:.2f}")
+    print(f"Descuento ({porcentaje2}%): ${descuento2:.2f}")
+    print(f"Monto final: ${monto_final2:.2f}")
+
+# Ejecutar el programa principal
+if __name__ == "__main__":
+    main()
